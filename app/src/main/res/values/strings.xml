@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">Tasks</string>
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="title">Title</string>
+    <string name="notes">Add Notes Here</string>
+    <string name="menu_insert">Add Task</string>
+    <string name="confirm">Save</string>
+    <string name="delete_task">Delete?</string>
+    <string name="save">Are you sure you want to save the task?</string>
+    <string name="isEmpty">Title must not be empty</string>
+    <string name="emptyField">Empty Field</string>
+    <string name="task_saved_message">Saved</string>
+    <string name="notify_new_task_title">Task Reminder!</string>
+</resources>
