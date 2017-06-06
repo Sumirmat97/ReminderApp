@@ -20,8 +20,11 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="@dimen/gutter"
             android:layout_marginEnd="@dimen/gutter"
+            android:layout_marginBottom="10dp"
             android:layout_below="@id/image"
             android:hint="@string/title"/>
+
+
         <TextView
             style="@android:style/TextAppearance.Medium"
             android:id="@+id/task_time"
@@ -39,11 +42,22 @@
             android:layout_toStartOf="@id/task_time"
             android:layout_alignBottom="@id/task_time"
             android:layout_marginEnd="10dp"/>
+
+        <TextView
+            android:id="@+id/setTime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toStartOf="@id/task_date"
+            android:layout_alignBottom="@id/task_time"
+            android:layout_marginEnd="10dp"
+            android:text="@string/set_date_and_time"/>
+
         <EditText
             android:id="@+id/notes"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_alignStart="@id/title"
+            android:layout_marginTop="10dp"
             android:layout_marginEnd="@dimen/gutter"
             android:layout_below="@id/task_time"
             android:hint="@string/notes"

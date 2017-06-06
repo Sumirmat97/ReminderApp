@@ -7,8 +7,17 @@
     <string name="confirm">Save</string>
     <string name="delete_task">Delete?</string>
     <string name="save">Are you sure you want to save the task?</string>
-    <string name="isEmpty">Title must not be empty</string>
+    <string name="isEmpty">Title must not be empty!</string>
     <string name="emptyField">Empty Field</string>
     <string name="task_saved_message">Saved</string>
     <string name="notify_new_task_title">Task Reminder!</string>
+    <string name="tasks">Tasks</string>
+    <string name="pref_task_title_key">default_title_task</string>
+    <string name="default_title_description">The default title for a task.</string>
+    <string name="default_title">Default Title</string>
+    <string name="pref_default_time_from_now_key">time_from _now_default</string>
+    <string name="minutes_from_now_description">The number of minutes in future to set the reminder.</string>
+    <string name="minutes_from_now">Minutes From Now</string>
+    <string name="menu_settings">Settings</string>
+    <string name="set_date_and_time">Set Date and Time</string>
 </resources>

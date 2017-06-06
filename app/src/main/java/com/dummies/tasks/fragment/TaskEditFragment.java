@@ -7,8 +7,11 @@ import android.app.NotificationManager;
 import android.content.ContentUris;
 import android.content.ContentValues;
 import android.content.DialogInterface;
+import android.content.SharedPreferences;
 import android.database.Cursor;
 import android.net.Uri;
+import android.preference.Preference;
+import android.preference.PreferenceManager;
 import android.support.v4.app.Fragment;
 
 import android.app.TimePickerDialog;
@@ -131,6 +134,20 @@ public class TaskEditFragment extends Fragment implements DatePickerDialog.OnDat
 
         if (taskId == 0)
         {
+            SharedPreferences sharedPreferences = PreferenceManager.getDefaultSharedPreferences(getActivity());
+
+            String defaultTitleKey = getString(R.string.pref_task_title_key);
+            String defaultTimeKey  = getString(R.string.pref_default_time_from_now_key);
+
+            String defaultTitle = sharedPreferences.getString(defaultTitleKey,null);
+            String defaultTime = sharedPreferences.getString(defaultTimeKey,null);
+
+            if(defaultTitle != null)
+                titleText.setText(defaultTitle);
+
+            if(defaultTime != null && defaultTime.length() > 0)
+                taskDateAndTime.add(Calendar.MINUTE,Integer.parseInt(defaultTime));
+
             updateDateAndTimeButtons();
         }
         else {

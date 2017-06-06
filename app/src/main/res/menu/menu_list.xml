@@ -5,4 +5,7 @@
         android:icon="@android:drawable/ic_menu_add"
         android:title="@string/menu_insert"
         app:showAsAction="always"/>
+    <item android:id="@+id/menu_settings"
+        app:showAsAction = "never"
+        android:title="@string/menu_settings"/>
 </menu>

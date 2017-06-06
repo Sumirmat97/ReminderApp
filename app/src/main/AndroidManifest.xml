@@ -27,6 +27,7 @@
             android:windowSoftInputMode="stateHidden">
 
         </activity>
+        <activity android:name="com.dummies.tasks.activity.PreferencesActivity"/>
 
         <provider
             android:authorities="com.dummies.tasks.provider.TaskProvider"

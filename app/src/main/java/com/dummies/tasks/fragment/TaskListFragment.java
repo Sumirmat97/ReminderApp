@@ -1,6 +1,7 @@
 package com.dummies.tasks.fragment;
 
 import android.app.LoaderManager;
+import android.content.Intent;
 import android.content.Loader;
 import android.database.Cursor;
 import android.os.Bundle;
@@ -15,6 +16,7 @@ import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
 
+import com.dummies.tasks.activity.PreferencesActivity;
 import com.dummies.tasks.activity.R;
 import com.dummies.tasks.adapter.TaskListAdapter;
 import com.dummies.tasks.interfaces.OnEditTask;
@@ -76,6 +78,8 @@ public class TaskListFragment extends Fragment implements android.support.v4.app
         {
             case R.id.menu_insert: ((OnEditTask) getActivity()).editTask(0);
                                      return true;
+            case R.id.menu_settings: startActivity(new Intent(getActivity(), PreferencesActivity.class));
+                    return true;
         }
         return super.onOptionsItemSelected(item);
     }
