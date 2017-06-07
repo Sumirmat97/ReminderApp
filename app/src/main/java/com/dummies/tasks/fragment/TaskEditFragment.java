@@ -6,11 +6,11 @@ import android.app.DatePickerDialog;
 import android.app.NotificationManager;
 import android.content.ContentUris;
 import android.content.ContentValues;
+import android.content.Context;
 import android.content.DialogInterface;
 import android.content.SharedPreferences;
 import android.database.Cursor;
 import android.net.Uri;
-import android.preference.Preference;
 import android.preference.PreferenceManager;
 import android.support.v4.app.Fragment;
 
@@ -40,7 +40,6 @@ import com.dummies.tasks.activity.R;
 import com.dummies.tasks.activity.TaskEditActivity;
 import com.dummies.tasks.adapter.TaskListAdapter;
 import com.dummies.tasks.interfaces.OnEditFinished;
-import com.dummies.tasks.interfaces.onSaveTask;
 import com.dummies.tasks.provider.TaskProvider;
 import com.dummies.tasks.util.ReminderManager;
 import com.squareup.picasso.Callback;
@@ -93,7 +92,7 @@ public class TaskEditFragment extends Fragment implements DatePickerDialog.OnDat
             taskDateAndTime = Calendar.getInstance();
         }
 
-        NotificationManager note = (NotificationManager) getContext().getSystemService(getContext().NOTIFICATION_SERVICE);
+        NotificationManager note = (NotificationManager) getContext().getSystemService(Context.NOTIFICATION_SERVICE);
         note.cancel((int) taskId);
     }
 
@@ -203,7 +202,7 @@ public class TaskEditFragment extends Fragment implements DatePickerDialog.OnDat
     {
         super.onCreateOptionsMenu(menu,menuInflater);
 
-        menu.add(0,MENU_SAVE,0,R.string.confirm).setShowAsAction(MenuItem.SHOW_AS_ACTION_ALWAYS);
+        menu.add(0,MENU_SAVE,0,R.string.confirm).setIcon(android.R.drawable.ic_menu_save).setShowAsAction(MenuItem.SHOW_AS_ACTION_ALWAYS);
     }
     @Override
     public boolean onOptionsItemSelected(MenuItem menuItem)

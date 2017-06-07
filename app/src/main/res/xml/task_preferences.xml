@@ -11,6 +11,11 @@
             android:key="@string/pref_default_time_from_now_key"
             android:summary="@string/minutes_from_now_description"
             android:title="@string/minutes_from_now"/>
-
+        <RingtonePreference
+            android:key="@string/tone_default_key"
+            android:summary="@string/tone_description"
+            android:title="@string/tone"
+            android:ringtoneType="notification"
+            />
     </PreferenceCategory>
 </PreferenceScreen>

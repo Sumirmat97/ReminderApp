@@ -23,7 +23,7 @@
             android:name=".TaskEditActivity"
             android:label=""
             android:parentActivityName=".TaskListActivity"
-            android:windowSoftInputMode="stateHidden">
+            android:windowSoftInputMode="adjustPan">
 
         </activity>
         <activity android:name="com.dummies.tasks.activity.PreferencesActivity"/>
