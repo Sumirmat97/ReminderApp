@@ -4,4 +4,5 @@
     <dimen name="gutter">10dp</dimen>
     <dimen name="task_card_elevation">6dp</dimen>
     <dimen name="status_bar_height">25dp</dimen>
+    <dimen name="fab_margin">16dp</dimen>
 </resources>

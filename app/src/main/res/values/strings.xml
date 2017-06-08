@@ -23,4 +23,5 @@
     <string name="tone_default_key">default_tone</string>
     <string name="tone_description">Tone for notifications</string>
     <string name="tone">Default tone</string>
+    <string name="title_activity_task_list_and_editor">TaskListAndEditorActivity</string>
 </resources>

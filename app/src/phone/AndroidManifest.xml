@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android">
+    <compatible-screens>
+        <!--all small size screens-->
+        <screen  android:screenDensity="ldpi" android:screenSize="small"/>
+        <screen
+            android:screenDensity="mdpi"
+            android:screenSize="small"/>
+        <screen
+            android:screenDensity="hdpi"
+            android:screenSize="small"/>
+        <screen
+            android:screenDensity="xhdpi"
+            android:screenSize="small"/>
+        <screen
+            android:screenDensity="xxhdpi"
+            android:screenSize="small"/>
+        <screen
+            android:screenDensity="xxxhdpi"
+            android:screenSize="small"/>
+
+        <!-- all normal size screens-->
+        <screen
+            android:screenDensity="ldpi"
+            android:screenSize="normal"/>
+        <screen
+            android:screenDensity="mdpi"
+            android:screenSize="normal"/>
+        <screen
+            android:screenDensity="hdpi"
+            android:screenSize="normal"/>
+        <screen
+            android:screenDensity="xhdpi"
+            android:screenSize="normal"/>
+        <screen
+            android:screenDensity="xxhdpi"
+            android:screenSize="normal"/>
+        <screen
+            android:screenDensity="xxxhdpi"
+            android:screenSize="normal"/>
+
+    </compatible-screens>
+
+
+    <application>
+        <activity android:name="com.dummies.tasks.activity.TaskListActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+        </activity>
+    </application>
+</manifest>

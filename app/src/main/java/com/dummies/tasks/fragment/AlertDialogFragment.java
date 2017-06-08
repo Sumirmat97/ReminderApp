@@ -26,7 +26,7 @@ public class AlertDialogFragment extends DialogFragment {
                     @Override
                     public void onClick(DialogInterface dialogInterface, int id) {
                         ((onSaveTask)getActivity()).doSave();
-                        getActivity().finish();
+
                     }
                 }
         );

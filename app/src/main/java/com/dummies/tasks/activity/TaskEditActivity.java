@@ -10,11 +10,10 @@ import android.support.v7.widget.Toolbar;
 import com.dummies.tasks.fragment.AlertDialogFragment;
 import com.dummies.tasks.fragment.TaskEditFragment;
 import com.dummies.tasks.interfaces.OnEditFinished;
-import com.dummies.tasks.interfaces.OnEditTask;
 import com.dummies.tasks.interfaces.onSaveTask;
 
-public class TaskEditActivity extends AppCompatActivity implements OnEditFinished,onSaveTask {
 
+public class TaskEditActivity extends AppCompatActivity implements OnEditFinished,onSaveTask {
     public static final String EXTRA_TASKID = "taskId";
     TaskEditFragment fragment;
     @Override
@@ -45,5 +44,6 @@ public class TaskEditActivity extends AppCompatActivity implements OnEditFinishe
     @Override
     public void doSave() {
         fragment.save();
+        this.finish();
     }
 }

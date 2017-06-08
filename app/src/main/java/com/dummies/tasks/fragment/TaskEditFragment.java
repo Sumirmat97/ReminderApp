@@ -23,6 +23,7 @@ import android.support.v4.app.LoaderManager;
 import android.support.v4.content.CursorLoader;
 import android.support.v4.content.Loader;
 import android.support.v7.graphics.Palette;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuInflater;
@@ -36,6 +37,7 @@ import android.widget.TextView;
 import android.widget.TimePicker;
 import android.widget.Toast;
 
+import com.dummies.tasks.activity.BuildConfig;
 import com.dummies.tasks.activity.R;
 import com.dummies.tasks.activity.TaskEditActivity;
 import com.dummies.tasks.adapter.TaskListAdapter;
@@ -221,7 +223,9 @@ public class TaskEditFragment extends Fragment implements DatePickerDialog.OnDat
                                     dialogInterface.cancel();
                                 }
                             }).show();
+
                 else {
+                    Log.d("","in task edit fragment calling finish Editing task");
                     ((OnEditFinished) getActivity()).finishEditingTask();
                 }
                 return true;
@@ -301,6 +305,9 @@ public class TaskEditFragment extends Fragment implements DatePickerDialog.OnDat
                                                                     public void onSuccess() {
                                                                         Activity activity = getActivity();
                                                                         if (activity == null)
+                                                                            return;
+
+                                                                        if (!BuildConfig.SHOULD_USE_PALETTE)
                                                                             return;
 
                                                                         Bitmap bitmap = ((BitmapDrawable) imageView
