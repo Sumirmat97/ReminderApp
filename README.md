@@ -10,5 +10,5 @@ Usings the setting the user can select their default title, time to remind and n
 As of now the images along with the reminders are random pics
 
 ## To do: ##
-Reset the alarms on reboot.
-Make those images in sync with the title of the reminder
+* Reset the alarms on reboot.
+* Make those images in sync with the title of the reminder
