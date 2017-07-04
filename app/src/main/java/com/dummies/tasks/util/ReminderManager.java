@@ -27,7 +27,7 @@ public class ReminderManager {
         intent.putExtra(TaskProvider.COLUMN_TASKID,taskId);
         intent.putExtra(TaskProvider.COLUMN_TITLE,title);
 
-        PendingIntent pendingIntent = PendingIntent.getBroadcast(context,0,intent,PendingIntent.FLAG_ONE_SHOT);
+        PendingIntent pendingIntent = PendingIntent.getBroadcast(context, (int) taskId,intent,PendingIntent.FLAG_ONE_SHOT);
 
         long diff =  (when.getTimeInMillis() - calendar.getTimeInMillis());
 
