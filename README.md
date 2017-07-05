@@ -7,6 +7,9 @@ A notification is generated to remind the user.
 
 Using the setting the user can select their default title, time to remind and notification tone.
 
+The app also works on tablets.
+minSDKversion = 21 (Android 5 Lollipop).
+
 As of now the images along with the reminders are random pics.
 
 version 1: Complete.
