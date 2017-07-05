@@ -1,20 +1,24 @@
 package com.dummies.tasks.fragment;
 
 import android.app.LoaderManager;
+import android.content.Context;
 import android.content.Intent;
 import android.content.Loader;
 import android.database.Cursor;
+import android.net.ConnectivityManager;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v4.content.CursorLoader;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Toast;
 
 import com.dummies.tasks.activity.PreferencesActivity;
 import com.dummies.tasks.activity.R;
@@ -31,16 +35,30 @@ public class TaskListFragment extends Fragment implements android.support.v4.app
     RecyclerView recyclerView;
     TaskListAdapter adapter;
 
+    public static boolean internetPresent;
+
     public TaskListFragment() {
         // Required empty public constructor
     }
 
 
+    private boolean checkInternetConnection() {
+        ConnectivityManager cm = (ConnectivityManager) getActivity().getSystemService(Context.CONNECTIVITY_SERVICE);
+        // test for connection
+        if (cm.getActiveNetworkInfo() != null
+                && cm.getActiveNetworkInfo().isAvailable()
+                && cm.getActiveNetworkInfo().isConnected()) {
+            return true;
+        } else {
+            return false;
+        }
+    }
     @Override
     public void onCreate(Bundle savedInstanceState)
     {
         super.onCreate(savedInstanceState);
         adapter = new TaskListAdapter();
+        internetPresent = checkInternetConnection();
         getLoaderManager().initLoader(0,null,this);
     }
 
@@ -62,6 +80,8 @@ public class TaskListFragment extends Fragment implements android.support.v4.app
     {
         super.onActivityCreated(savedInstanceState);
         setHasOptionsMenu(true);
+        if(!internetPresent)
+            Toast.makeText(getActivity(), R.string.bestViewed, Toast.LENGTH_SHORT).show();
     }
 
     @Override

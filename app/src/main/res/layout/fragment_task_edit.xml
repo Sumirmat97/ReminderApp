@@ -12,7 +12,9 @@
             android:layout_width="match_parent"
             android:minHeight="?android:actionBarSize"
             android:adjustViewBounds="true"
-            android:layout_alignParentTop="true"/>
+            android:layout_alignParentTop="true"
+            android:contentDescription="@string/displaytopimage"
+            />
 
         <EditText
             android:id="@+id/title"

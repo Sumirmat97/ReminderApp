@@ -6,7 +6,7 @@
     android:baselineAligned="false">
 
     <android.support.v7.widget.Toolbar
-        style="?android:actionBarStyle"
+
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:title="@string/app_name"

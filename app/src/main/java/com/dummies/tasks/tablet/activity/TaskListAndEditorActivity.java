@@ -36,13 +36,24 @@ public class TaskListAndEditorActivity extends AppCompatActivity implements onSa
     }
     @Override
     public void editTask(long id) {
+
+        FragmentManager fragmentManager = getSupportFragmentManager();
+        FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
+
+        Fragment fragment = fragmentManager.findFragmentByTag(TaskEditFragment.DEFAULT_FRAGMENT_TAG);
+        if(fragment != null) {
+            fragmentTransaction.remove(fragment);
+            fragmentTransaction.commit();
+        }
+
         fragment = TaskEditFragment.newInstance(id);
-        FragmentTransaction fragmentTransaction = getSupportFragmentManager().beginTransaction();
-        fragmentTransaction.replace(R.id.edit_container,fragment,TaskEditFragment.DEFAULT_FRAGMENT_TAG);
+        fragmentTransaction = getSupportFragmentManager().beginTransaction();
+        fragmentTransaction.replace(R.id.edit_container, fragment, TaskEditFragment.DEFAULT_FRAGMENT_TAG);
 
         fragmentTransaction.addToBackStack(null);
 
         fragmentTransaction.commit();
+
     }
 
     @Override
@@ -61,9 +72,12 @@ public class TaskListAndEditorActivity extends AppCompatActivity implements onSa
 
     @Override
     public void doSave() {
-        fragment.save();
 
         FragmentManager fragmentManager = getSupportFragmentManager();
+        fragment = (TaskEditFragment) fragmentManager.findFragmentByTag(TaskEditFragment.DEFAULT_FRAGMENT_TAG);
+        fragment.save();
+
+
         FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
 
         Fragment fragment = fragmentManager.findFragmentByTag(TaskEditFragment.DEFAULT_FRAGMENT_TAG);

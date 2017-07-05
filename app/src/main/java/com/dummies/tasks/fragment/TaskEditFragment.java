@@ -96,6 +96,8 @@ public class TaskEditFragment extends Fragment implements DatePickerDialog.OnDat
 
         NotificationManager note = (NotificationManager) getContext().getSystemService(Context.NOTIFICATION_SERVICE);
         note.cancel((int) taskId);
+
+
     }
 
 
@@ -298,8 +300,8 @@ public class TaskEditFragment extends Fragment implements DatePickerDialog.OnDat
         Long dateInMillis = task.getLong(task.getColumnIndexOrThrow(TaskProvider.COLUMN_DATE_TIME));
         Date date = new Date(dateInMillis);
         taskDateAndTime.setTime(date);
-
-        Picasso.with(getActivity()).load(TaskListAdapter.getImageUrlForTask(taskId))
+        if(TaskListFragment.internetPresent)
+             Picasso.with(getActivity()).load(TaskListAdapter.getImageUrlForTask(taskId))
                                                         .into(imageView, new Callback() {
                                                                     @Override
                                                                     public void onSuccess() {

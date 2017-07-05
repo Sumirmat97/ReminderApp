@@ -9,7 +9,7 @@
         android:id="@+id/toolbar1"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:title="@string/app_name" />
+        android:title="@string/tasks" />
 
     <fragment
         android:id="@+id/fragment"

@@ -47,7 +47,6 @@ public class TaskProvider extends ContentProvider {
     public boolean onCreate() {
 
         database = new DatabaseHelper(getContext()).getWritableDatabase();
-        Log.d("in on create++","database created");
         return true;
     }
 
@@ -130,8 +129,6 @@ public class TaskProvider extends ContentProvider {
     public Uri insert(@NonNull Uri uri, @Nullable ContentValues contentValues) {
         if(contentValues.containsKey(COLUMN_TASKID))
             throw new UnsupportedOperationException();
-
-        Log.d("in insert ++++ ",contentValues.get(COLUMN_TITLE).toString());
 
         long id = database.insertOrThrow(DATABASE_TABLE,null,contentValues);
         getContext().getContentResolver().notifyChange(uri,null);

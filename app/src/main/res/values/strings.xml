@@ -1,19 +1,19 @@
 <resources>
-    <string name="app_name">Tasks</string>
+    <string name="app_name">Reminders</string>
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="title">Title</string>
     <string name="notes">Add Notes Here</string>
     <string name="menu_insert">Add Task</string>
     <string name="confirm">Save</string>
     <string name="delete_task">Delete?</string>
-    <string name="save">Are you sure you want to save the task?</string>
+    <string name="save">Are you sure you want to save the reminder?</string>
     <string name="isEmpty">Title must not be empty!</string>
     <string name="emptyField">Empty Field</string>
     <string name="task_saved_message">Saved</string>
     <string name="notify_new_task_title">Task Reminder!</string>
     <string name="tasks">Tasks</string>
     <string name="pref_task_title_key">default_title_task</string>
-    <string name="default_title_description">The default title for a task.</string>
+    <string name="default_title_description">The default title for a reminder.</string>
     <string name="default_title">Default Title</string>
     <string name="pref_default_time_from_now_key">time_from _now_default</string>
     <string name="minutes_from_now_description">The number of minutes in future to set the reminder.</string>
@@ -24,4 +24,6 @@
     <string name="tone_description">Tone for notifications</string>
     <string name="tone">Default tone</string>
     <string name="title_activity_task_list_and_editor">TaskListAndEditorActivity</string>
+    <string name="bestViewed">Best Viewed with Internet On</string>
+    <string name="displaytopimage">displayTopImage</string>
 </resources>

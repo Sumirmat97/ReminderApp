@@ -12,7 +12,7 @@
     android:layout_gravity="center"
     android:elevation="@dimen/task_card_elevation"
     android:foreground="?android:attr/selectableItemBackground"
-    card_view:cardCornerRadius="0dp">
+    card_view:cardCornerRadius="5dp">
 
 
     <RelativeLayout
@@ -24,7 +24,8 @@
             android:layout_width="100dp"
             android:layout_height="100dp"
             android:scaleType="centerCrop"
-            android:layout_alignParentStart="true"/>
+            android:layout_alignParentStart="true"
+            android:src="@drawable/default_img"/>
         <TextView
             style="@android:style/TextAppearance.Medium"
             android:id="@+id/text1"

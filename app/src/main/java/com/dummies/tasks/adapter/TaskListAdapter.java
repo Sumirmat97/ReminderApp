@@ -1,15 +1,9 @@
 package com.dummies.tasks.adapter;
 
 import android.content.Context;
-import android.content.DialogInterface;
 import android.database.Cursor;
-import android.support.v4.app.DialogFragment;
-import android.support.v4.app.Fragment;
-import android.support.v4.app.FragmentManager;
-import android.support.v7.app.AlertDialog;
 import android.support.v7.widget.CardView;
 import android.support.v7.widget.RecyclerView;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -17,8 +11,7 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.dummies.tasks.activity.R;
-import com.dummies.tasks.activity.TaskListActivity;
-import com.dummies.tasks.fragment.AlertDialogFragment;
+import com.dummies.tasks.fragment.TaskListFragment;
 import com.dummies.tasks.interfaces.OnDeleteTask;
 import com.dummies.tasks.interfaces.OnEditTask;
 import com.dummies.tasks.provider.TaskProvider;
@@ -49,7 +42,6 @@ public class TaskListAdapter extends RecyclerView.Adapter<TaskListAdapter.ViewHo
         notifyDataSetChanged();
     }
 
-
     @Override
     public ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
         CardView v = (CardView) LayoutInflater.from(parent.getContext()).inflate(R.layout.card_task,parent,false);
@@ -66,7 +58,8 @@ public class TaskListAdapter extends RecyclerView.Adapter<TaskListAdapter.ViewHo
         viewHolder.titleView.setText(cursor.getString(titleColumnIndex));
         viewHolder.notesView.setText(cursor.getString(notesColumnIndex));
 
-        Picasso.with(context).load(getImageUrlForTask(id)).into(viewHolder.imageView);
+        if(TaskListFragment.internetPresent)
+            Picasso.with(context).load(getImageUrlForTask(id)).into(viewHolder.imageView);
 
         viewHolder.cardView.setOnClickListener(new View.OnClickListener(){
             @Override
@@ -95,7 +88,7 @@ public class TaskListAdapter extends RecyclerView.Adapter<TaskListAdapter.ViewHo
     }
 
     public static String getImageUrlForTask(long taskId) {
-        return "http://lorempixel.com/600/400/cats/?fakeId=" + taskId;
+        return "http://lorempixel.com/600/400/nature/?fakeId=" + taskId;
     }
 
     @Override
