@@ -7,7 +7,9 @@ A notification is generated to remind the user.
 
 Using the setting the user can select their default title, time to remind and notification tone.
 
-As of now the images along with the reminders are random pics
+As of now the images along with the reminders are random pics.
 
-## To do: ##
+version 1: Complete.
+
+## Version 2 To do: ##
 * Make those images in sync with the title of the reminder
