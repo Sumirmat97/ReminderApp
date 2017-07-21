@@ -23,7 +23,7 @@
             android:layout_height="match_parent"
             android:layout_weight="1"
             android:id="@+id/list_fragment"
-            android:name="com.dummies.tasks.fragment.TaskListFragment"/>
+            android:name="com.sumir.reminder.fragment.TaskListFragment"/>
 
         <FrameLayout
             android:layout_width="0dp"

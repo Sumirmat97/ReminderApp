@@ -43,7 +43,7 @@
 
 
     <application>
-        <activity android:name="com.dummies.tasks.activity.TaskListActivity">
+        <activity android:name="com.sumir.reminder.activity.TaskListActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
                 <category android:name="android.intent.category.LAUNCHER"/>

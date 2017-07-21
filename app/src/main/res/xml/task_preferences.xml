@@ -16,6 +16,8 @@
             android:summary="@string/tone_description"
             android:title="@string/tone"
             android:ringtoneType="notification"
+            android:showSilent="false"
+
             />
 
     </PreferenceCategory>

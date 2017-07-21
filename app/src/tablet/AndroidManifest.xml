@@ -42,7 +42,7 @@
     </compatible-screens>
 
     <application>
-        <activity android:name="com.dummies.tasks.tablet.activity.TaskListAndEditorActivity" >
+        <activity android:name="com.sumir.reminder.tablet.activity.TaskListAndEditorActivity" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
                 <category android:name="android.intent.category.LAUNCHER"/>
